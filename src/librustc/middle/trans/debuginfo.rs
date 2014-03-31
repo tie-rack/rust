@@ -2418,7 +2418,8 @@ fn populate_scope_map(cx: &CrateContext,
                 parent_scope,
                 file_metadata,
                 loc.line as c_uint,
-                loc.col.to_uint() as c_uint)
+                loc.col.to_uint() as c_uint,
+                0)
         };
 
         scope_stack.push(ScopeStackEntry { scope_metadata: scope_metadata, ident: None });
@@ -2535,7 +2536,8 @@ fn populate_scope_map(cx: &CrateContext,
                                 parent_scope,
                                 file_metadata,
                                 loc.line as c_uint,
-                                loc.col.to_uint() as c_uint)
+                                loc.col.to_uint() as c_uint,
+                                0)
                         };
 
                         scope_stack.push(ScopeStackEntry {
